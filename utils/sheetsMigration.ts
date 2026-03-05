@@ -6,7 +6,11 @@
  */
 
 import { getFirestore, collection, addDoc, writeBatch, doc } from 'firebase/firestore';
-import { Product, Expense, Shipment, PartnerPayment } from '../types';
+// Types are defined locally to avoid external dependency
+type Product = Record<string, any>;
+type Expense = Record<string, any>;
+type Shipment = Record<string, any>;
+type PartnerPayment = Record<string, any>;
 
 interface SheetsProduct {
   name: string;
